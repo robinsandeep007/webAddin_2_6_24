@@ -1,0 +1,68 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>citi Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <div class="container rounded mt-3 p-3">
+   
+        <div class="card  rounded shadow-lg bg-light center">
+            <div class="card-body row">
+                <label for="flph"><b>FilePath</b>:</label>
+                <input type="text" class="form-control" id="flph" style="font-size: 10px;font-weight: bold"  value="Readonly text here..." readonly>
+            </div>
+            <div class="card-body row">
+                <label for="flnm"><b>FileName</b>:</label>
+                <input type="text" class="form-control" id="flnm" style="font-size: 10px;font-weight: bold" value="FileName is set here" readonly>
+            </div>
+            <div class="card-body row">
+                <label for="eucid"><b>EUC Inventory ID</b>:</label>
+                <input type="text" class="form-control" id="eucid" style="font-size: 10px;font-weight: bold" value="EUC Inventory ID is set here" readonly>
+            </div>
+        
+        </div>
+    
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
+    </section>
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+
+
+        <div role="button" id="protect" class="ms-welcome__action ms-Button ms-Button--hero">
+            <button class="btn" style="background-color: #b8bbdf;
+            color: white;">Protect</button>
+        </div>
+ 
+        <div role="button" id="unprotect" class="ms-welcome__action ms-Button ms-Button--hero">
+            <button class="btn" style="background-color: #787a92;
+            color: white;">UnProtect</button>
+        </div>
+
+        <div role="button" id="coverpage" class="ms-welcome__action ms-Button ms-Button--hero">
+            <button id="setup" class="btn" style="background-color: #555777;
+            color: white;">
+                CoverPage
+            </button>
+        </div>
+    </main>
+</div>
+</body>
+
+</html>
